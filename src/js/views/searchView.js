@@ -22,7 +22,7 @@ export const highlighSelected = id => {
   resultsArray.forEach(el => {
     el.classList.remove("results__link--active");
   });
-  document.querySelector(`a[href="#${id}"]`).classList.add("results__link--active");
+  document.querySelector(`.results__link[href="#${id}"]`).classList.add("results__link--active");
 };
 
 // 'Pasta with tomato and spinach'
@@ -33,7 +33,7 @@ acc: 9 / acc + curr.length = 15 / newTitle = ['Pasta', 'with', 'tomato'] - limit
 acc: 15 / acc + curr.length = 18 / newTitle = ['Pasta', 'with', 'tomato'] - limit reached
 acc: 18 / acc + curr.length = 24 / newTitle = ['Pasta', 'with', 'tomato'] - limit reached
 */
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
   const newTitle = [];
   if (title.length > limit) {
     title.split(" ").reduce((acc, curr) => {
